@@ -1,0 +1,65 @@
+* {
+    border-radius: 30px;
+    padding: 8px;
+    text-align: center ;
+}
+
+body {
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+img {
+    margin: 0 auto;
+    height: 500px;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+    transition: 1s;
+}
+
+.mouseEvent {
+    border: 6px solid salmon;
+    width: 220px;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+.themeContainer {
+    position: fixed;
+    top : 0;
+}
+
+.theme {
+    height: 30px;
+    width: 30px;
+    /* cursor pointer veut dire que c'est cliquable ! */
+    cursor: pointer;
+}
+
+#dark {
+    background-color: black;
+}
+
+#salmon {
+    background-color: salmon;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+.darkTheme {
+    background: black;
+    color: white;
+}
+.salmonTheme {
+    background: salmon;
+}
+.yellowTheme {
+    background: yellow;
+}
