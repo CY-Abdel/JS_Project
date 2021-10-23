@@ -12,7 +12,8 @@ body {
 }
 main {
     margin:  3rem auto 0; 
-    width: 500px;
+    /* width: 500px; */
+    width: 50%;
     background: rgb(131, 196, 208);  
     padding: 1rem 2rem 2rem;
     box-shadow: 2px 2px 6px #333;
@@ -20,7 +21,7 @@ main {
 }
 .img {
     background: url('https://www.lemondedelenergie.com/wp-content/uploads/2020/02/dark-mode-jpg.jpg') no-repeat 100%/cover;
-    height: 300px;
+    height: 320px;
     border-radius: 4px;
 }
 .toggle {
@@ -84,3 +85,56 @@ main {
 .dark .ball {
     background: #09FBBA;
 }
+
+
+/* Signature Github */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+.signature {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(51, 51, 51, 0.808);
+    padding: .5rem .5rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0px 3px rgb(9,251,186);
+    color: rgb(9,251,186);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.signature h3 {
+    margin: 0;
+}
+
+.signature:hover {
+    transform: translateX(3px);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.808) 30%, rgba(100, 100, 100, 0.808) 100% );
+    transition: .3s ease;
+    box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+    color: rgb(79, 250, 204);
+}
+.signature:focus {
+    outline: none;
+}
+.signature .flag {
+    height: 13px;
+    width: 22px;
+    background: url('https://kabyle.com/wp-content/uploads/2019/06/amazigh-flag.jpg') no-repeat center/cover;
+    
+    /* Le Drapeau Français */
+    /* background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%); */
+    box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+    margin-right: 6px;
+    transform: translateY(2px);
+}
+
+.signature i {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 1px #222;
+    transform: translateY(2px);
+}
+
+.dark 
