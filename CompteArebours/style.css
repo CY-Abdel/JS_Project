@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+body {
+    /* SI LE FONT-FAMILY NE fonctionne PAS EN FAIT
+
+    font-family: 'Orbitron', sans-serif !important;
+    
+    CAR C'EST BOOTSTRAP QUI L'EMPèCHE */
+    font-family: 'Orbitron', sans-serif;
+}
+h3 {
+    font-size: 2rem !important;   
+}
+.container {
+    width: 225px !important;
+}
+.form-group {
+    display: flex;
+}
+
+#countdown {
+    font-size: 13rem;
+}
