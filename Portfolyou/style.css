@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    /* on retire la souris apres avoir confugurer .cursor stylel */
+    cursor: none;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    /* la nav fera tjr 10% de la hauteur de la page */
+    min-height: 10vh;
+    align-items: center;
+    margin: auto;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-links li{
+    padding: 1rem;
+}
+
+/* le nav-links && le h2 */
+.nav-links, h2{
+    flex: 1;
+}
+.img {
+   height: 60vh;
+   width: 90%;
+   margin: 0 auto;
+   background: url(./image/wp4600617.jpg) no-repeat center/cover;
+   box-shadow: 0 10px 30px black;
+   filter: sepia(70%);
+   transition: 2s;
+}
+.img:hover {
+    filter: none;
+}
+p {
+    padding: 3rem 5rem;
+}
+
+/* PARTIE CURSOR ************** MODELISER ****** */
+
+.cursor {
+   width: 3rem;
+   height: 3rem;
+   border: 2px solid #222;
+   border-radius: 50%;
+   position: absolute;
+   /* //   AU DEPART LE CERCLE EST BIEN CENTRER */
+   transform: translate(-50%, -50%);
+   pointer-events: none;
+   /* LE CURSOR PASSE DERIERE LA PHOTO ON DOIT LE FAIRE PASSER DESSU */
+   transition: all 0.5s ease;
+   transition-property: backround, transform;
+   z-index: 2;
+   /* on ajoute la lumniosité au cursor quand il hover (survole) l'image */
+   /* NB : IL FAUT ACTIVER BACKDROP SUR FIREFOX VOIR (./image/activer backdrop sur firefox) */
+   /* backdrop-filter: brightness(250%); */
+}
+
+.brightness {
+   backdrop-filter: brightness(250%);
+}
+
+
+
+/* LORSQS ON SURVOLE LES 'li' ON APPORTE LES CHANGEMENT A LA NAV BAR & ON GROSSI LE CURSUR*/
+
+.link-grow {
+   transform: scale(1.5) translate(-25%, -25%);
+   background: #222;
+   opacity: 0.9;
+   z-index: 2;
+}
+.hovered-link {
+   color: white;
+   transition: 0.3s ease-out;
+   z-index: 3;
+}
+
+
+
+
+/* Signature Github */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+.signature {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(51, 51, 51, 0.808);
+    padding: .5rem .5rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0px 3px rgb(9,251,186);
+    color: rgb(9,251,186);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.signature h3 {
+    margin: 0;
+}
+
+.signature:hover {
+    transform: translateX(3px);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.808) 30%, rgba(100, 100, 100, 0.808) 100% );
+    transition: .3s ease;
+    box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+    color: rgb(79, 250, 204);
+}
+.signature:focus {
+    outline: none;
+}
+.signature .flag {
+    height: 13px;
+    width: 22px;
+    background: url('https://kabyle.com/wp-content/uploads/2019/06/amazigh-flag.jpg') no-repeat center/cover;
+    
+    /* Le Drapeau Français */
+    /* background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%); */
+    box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+    margin-right: 6px;
+    transform: translateY(2px);
+}
+
+.signature i {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 1px #222;
+    transform: translateY(1px);
+}
+
+
