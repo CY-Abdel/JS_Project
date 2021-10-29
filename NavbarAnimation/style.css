@@ -20,48 +20,123 @@ nav {
     box-shadow: 0 0 3px;
     position: fixed;
 }
-
-.nav-elements{
-display: flex;
-}
-
-/*
-    .nav-elements {
+.nav-elements {
     display: flex;
     justify-content: space-between;
+    /* CENTRER VERTICALEMENT */
     align-items: center;
     width: 90%;
+    /* APPLIQUER LA MARGIN AUTO POUR LA WIDTH 90% */
     margin: auto;
     height: 10vh;
 }
-    .nav-elements a {
+.nav-elements a {
     color: #333;
     text-decoration: none;
 }
-    .nav-elements a:visited {
+.nav-elements a:visited {
     color: #333;
 }
-    .nav-elements h2 {
-    transition: all .3s ease-in-out;
+.nav-elements h2 {
+    transition: all 0.3s ease-in-out;
 }
-    .nav-links {
+.nav-links {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
 }
-    .nav-links, h2 {
+.nav-links , h2 {
     flex: 1;
     color: #333;
 }
-    .nav-links li {
+.nav-elements li {
     padding: 1rem;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
 }
-    .nav-elements h2:hover {
+.nav-elements h2:hover {
     font-weight: 100;
 }
-    .nav-links li:hover {
+.nav-links li:hover {
     transform: translateX(5px);
     font-weight: bold;
 } 
-*/
+
+
+
+/* ******  CSS Content (<div> && <p> && <img svg> ********** */
+
+h1 {
+    padding: 1.5rem;
+}
+
+p {
+    text-align: justify;
+}
+p::first-letter {
+    font-size: 1.6rem;
+    color: rgb(0, 144, 216);
+}
+.about {
+    display: flex;
+    padding: 6rem 1rem 1rem 0;
+    margin-bottom: 3rem;
+}
+.dummy-about {
+    padding: 2rem 2rem 2rem 0;
+    flex: 0 0 60%;
+    position: relative;
+}
+.about img {
+    width: 40%;
+}
+
+.contact {
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+.contact h1 {
+    text-align: right;
+    padding-right: 33.5%;
+}
+.dummy-contact {
+    display: flex;
+}
+.contact-text {
+    flex: 0 0 40%;
+}
+.contact img {
+    width: 60%;
+    padding: 2rem;
+}
+
+
+.login {
+    padding: 2rem;
+    background: rgba(52, 187, 255, 0.287);
+}
+.login h1 {
+    text-align: center;
+}
+.login img {
+    padding-top: 2rem ;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+@media screen and (min-width: 1000px) {
+    main {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .nav-elements {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 999px) {
+    main {
+        padding: 0 2rem;
+    }
+    
+}
