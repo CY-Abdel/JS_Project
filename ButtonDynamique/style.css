@@ -1,0 +1,102 @@
+body {
+    background: #333;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#button {
+    position: relative;
+    /* le cercle jaune depasse le button mais avec hidden il va juste etre afficher dans le button pas a l'exter */
+    overflow: hidden;
+    background: #ff5242;
+    padding: 2rem 3rem;
+    color: #333;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+}
+span {
+    position: relative;
+    /* impossible de selection le text dans le button */
+    pointer-events: none;
+}
+
+#button::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    /* valeur de --x et --y a injecter dans le JS script */
+    left: var(--x);
+    top: var(--Y);
+    background: radial-gradient(circle closest-side, rgb(255,219,59), transparent);
+    width: var(--size);
+    height: var(--size);
+    transform: translate(-50%, -50%);
+    transition: 0.6s ease-out;
+
+}
+#button:hover::before {
+    --size: 400px;
+    transition: 0.2s ease;
+}
+
+
+
+
+/* Signature Github */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+.signature {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: rgba(51, 51, 51, 0.808);
+    padding: .5rem .5rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0px 3px rgb(9,251,186);
+    color: rgb(9,251,186);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.signature h3 {
+    margin: 0;
+}
+
+.signature:hover {
+    transform: translateX(3px);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.808) 30%, rgba(100, 100, 100, 0.808) 100% );
+    transition: .3s ease;
+    box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+    color: rgb(79, 250, 204);
+}
+.signature:focus {
+    outline: none;
+}
+.signature .flag {
+    height: 13px;
+    width: 22px;
+    background: url('https://kabyle.com/wp-content/uploads/2019/06/amazigh-flag.jpg') no-repeat center/cover;
+    
+    /* Le Drapeau Français */
+    /* background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%); */
+    box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+    margin-right: 6px;
+    transform: translateY(2px);
+}
+
+.signature i {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 1px #222;
+    transform: translateY(1px);
+}
+
+
