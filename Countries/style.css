@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+* {
+   margin: 0 auto;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Dosis", sans-serif;
+   /* cENTRER LE TEXT HORIZ */
+   text-align: center;
+}
+body{
+   background: linear-gradient(180deg, #333333 30%, #181818 90%);
+   min-height: 100vh;
+   margin: 0rem 1rem;
+}
+h1 {
+   text-transform: uppercase;
+   color: #7CFC00;
+   padding: 3rem 0;
+}
+input{
+   margin-bottom: 2rem;
+   font-family: inherit;
+   border-radius: 50px;
+   padding: .5rem;
+   width: 70%;
+   outline: none;
+   font-size: 2rem;
+   border: 2px solid #333;
+   color: #214003;
+   transition: all .3s ease;  
+}
+input:focus{
+   border: 2px solid #7CFC00;
+   box-shadow: 0px 0px 2px #7CFC00;
+}
+#results {
+   display: flex;
+   flex-wrap: wrap;
+   /* flex-wrap: wrap-reverse; */
+}
+.country-item {
+	box-shadow: 0 2px 5px rgb(0, 0, 0, 0.5);
+   border-radius: 25px;
+   background: linear-gradient(90deg, azure 0%, #7CFC00 100%);
+   display: flex;
+   align-items: center;
+   padding: 0.3rem;
+   width: 380px;
+   margin: 0.3rem auto;
+   color: rgb(44, 39, 39);   
+}
+.country-flag {
+   width: 2.5rem;
+   height: 1.7rem;
+   margin-left: 0.5rem;
+   border-radius: 50px;
+   box-shadow: 1px 1px 3px #333;
+}
+.country-name {
+   flex: 2;
+   margin: 0 2px;
+   padding: 0 0.5rem; 
+   text-align: center;
+   border-right: 1px solid #333;
+}
+.country-capital {
+   padding: 0 0.4rem;
+   text-align: center;
+   flex: 1;
+   color: rgb(17, 80, 97);
+
+}
+.country-info {
+   border-left: 1px solid #333;
+   padding: 0 .3rem;
+   text-align: center;
+   flex: 1;
+}
+.country-population{
+   width: 100px;
+}
+h3{
+  font-size: 1.1rem;
+}
+h5{
+  font-size: .7rem;
+  color: rgb(17, 80, 97);
+}
+.country-population-text{
+	text-transform: uppercase;
+}
+
+
+
+
+/* Signature Github */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+.signature {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(51, 51, 51, 0.808);
+    padding: .5rem .5rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0px 3px rgb(9,251,186);
+    color: rgb(9,251,186);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.signature h3 {
+    margin: 0;
+}
+
+.signature:hover {
+    transform: translateX(3px);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.808) 30%, rgba(100, 100, 100, 0.808) 100% );
+    transition: .3s ease;
+    box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+    color: rgb(79, 250, 204);
+}
+.signature:focus {
+    outline: none;
+}
+.signature .flag {
+    height: 13px;
+    width: 22px;
+    background: url('https://kabyle.com/wp-content/uploads/2019/06/amazigh-flag.jpg') no-repeat center/cover;
+    
+    /* Le Drapeau Français */
+    /* background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%); */
+    box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+    margin-right: 6px;
+    transform: translateY(5px);
+}
+
+.signature i {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 1px #222;
+    transform: translateY(0px);
+  }
+
+
