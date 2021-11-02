@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* lorsqu"on va d'1 lien (a#about) vers un autre ce n"est pas brusque */
+/* CLIQUER SUR LES ELEMENTS DE LA NAV (ABOUT CONTACT LOGIN) POUR VOIR LA TRANSITION FLUIDE */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: rgba(216, 213, 213, 0.473);
+}
+
+/* CSS DE LA NAVBAR */
+
+nav {
+    width: 100%;
+    background: #00FA9A;
+    box-shadow: 0 0 3px #333;
+    position: fixed;
+    /*  CETTE TRANSITION EST LORSQUE ON SCROLL LA NAVBAR VA REFUITE SA TAILLE (NON BRUSQUE) */
+    transition: all .3s ease-out;
+    z-index: 5;
+}
+.nav-elements {
+    display: flex;
+    justify-content: space-between;
+    /* CENTRER VERTICALEMENT */
+    align-items: center;
+    width: 90%;
+    /* APPLIQUER LA MARGIN AUTO POUR LA WIDTH 90% */
+    margin: auto;
+    height: 10vh;
+    /*  CETTE TRANSITION EST LORSQUE ON SCROLL LA NAVBAR VA REFUITE SA TAILLE EN 0.3S (NON BRUSQUE) */
+    transition: all .3s ease-out;
+
+}
+.nav-elements a {
+    color: #333;
+    text-decoration: none;
+}
+.nav-elements a:visited {
+    color: #333;
+}
+.nav-elements h2 {
+    transition: all 0.3s ease-in-out;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.nav-links , h2 {
+    flex: 1;
+    color: #333;
+}
+.nav-elements li {
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+.nav-elements h2:hover {
+    font-weight: 100;
+}
+.nav-links li:hover {
+    transform: translateX(5px);
+    font-weight: bold;
+} 
+
+
+
+/* ******  CSS Content (<div> && <p> && <img svg> ********** */
+
+h1 {
+    padding: 1.5rem;
+}
+
+p {
+    text-align: justify;
+}
+p::first-letter {
+    font-size: 1.6rem;
+    color: rgb(19, 152, 101);
+}
+.about {
+    display: flex;
+    padding: 6rem 1rem 1rem 0;
+    margin-bottom: 3rem;
+}
+.dummy-about {
+    padding: 2rem 2rem 2rem 0;
+    flex: 0 0 50%;
+    position: relative;
+}
+.about img {
+    width: 100%;
+}
+
+.contact {
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+.contact-text h1 {
+    /* text-align: right; */
+    padding-left: 5%;
+}
+.dummy-contact {
+    display: flex;
+}
+.contact-text {
+    flex: 0 0 35%;
+}
+.contact img {
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 1s ease-in;
+}
+
+
+.login {
+    padding: 2rem;
+    background: rgba(52, 191, 255, 0.287);
+    margin-bottom: 20px;
+}
+.login h1 {
+    text-align: center;
+}
+.login img {
+    padding-top: 2rem ;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+@media screen and (min-width: 1000px) {
+    main {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .nav-elements {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 999px) {
+    main {
+        padding: 0 2rem;
+    }   
+}
+
+/* ***************** Pop Up ************* */
+
+.pop-up {
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(90deg, #30587A, rgb(36, 113, 180));
+    border-radius: 76% 24% 90% 10% / 20% 85% 15% 80%;
+    box-shadow: 0 5px 10px black;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: 1s ease-out;
+}
+.pop-up-container {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+.pop-up-container h3 {
+    color: white;
+    margin: 0.8rem;
+    font-size: 1.5em;
+}
+.button-container input {
+    border: 1px solid #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 1px 2px 0 black;
+    outline: none;
+    font-size: 0.9rem;
+    transition: .5s;
+}
+.button-container input:focus {
+    background: rgb(211, 242, 251);
+}
+.button-container button {
+    border-radius: 15px;
+    padding: 0.8rem 1.52rem;
+    font-size: 0.9rem;
+    border: 1px solid #333;
+    outline: none;
+    cursor: pointer;
+    background: azure;
+    box-shadow: 1px 2px 0 black;
+    transition: 0.3s;
+  }
+  .button-container button:hover {
+    background: rgb(211, 242, 251);
+    transform: translateX(-1px);
+  }
+  .button-container button:active {
+    transform: scale(0.96);
+  }
+  .fa-times-circle {
+    position: absolute;
+    left: 1.5rem;
+    top: .6rem;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: 2px 2px 0px #333;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .fa-times-circle:hover {
+    color: rgb(211, 242, 251);
+    transform: translateX(-1px);
+  }
+  .fa-times-circle:active {
+    transform: scale(1.5);
+  }
+
+
+
+
+
+/* Signature Github */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+.container-signature {
+    margin-bottom: 5%;
+}
+.signature {
+    display: flex;
+    position: absolute;
+    /* bottom: 1rem; */
+    left: 5%;
+    background: rgba(51, 51, 51, 0.808);
+    padding: .5rem .5rem;
+    border-radius: 50px;
+    box-shadow: 0 0 0px 3px rgb(9,251,186);
+    color: rgb(9,251,186);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+    margin-right: 10%;
+}
+.signature h3 {
+    margin: 0;
+}
+.signature:hover {
+    transform: translateX(3px);
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.808) 30%, rgba(100, 100, 100, 0.808) 100% );
+    transition: .3s ease;
+    box-shadow: 0 0 0px 3px rgb(79, 250, 204);
+    color: rgb(79, 250, 204);
+}
+.signature:focus {
+    outline: none;
+}
+.signature .flag {
+    height: 13px;
+    width: 22px;
+    background: url('https://kabyle.com/wp-content/uploads/2019/06/amazigh-flag.jpg') no-repeat center/cover;
+    
+    /* Le Drapeau Français */
+    /* background: linear-gradient(90deg, blue 36%, white 36%, white 67%, red 67%); */
+    box-shadow: inset 2px 2px 2px #222, 2px 2px 1px #222;
+    margin-right: 6px;
+    transform: translateY(2px);
+}
+.signature i {
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 1px #222;
+    transform: translateY(1px);
+}
