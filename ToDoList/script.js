@@ -32,7 +32,7 @@ function storage() {
 }
 
 
-// afficher les taches enregistrer dans le local storage
+// afficher les taches enregistrer dans le local storage !
 function getValue() {
     let storageContent = window.localStorage.todoList;
     if (!storageContent) {
