@@ -1,0 +1,32 @@
+* {
+    /* border: 2px solid red; */
+}
+body {
+    background: rgb(11, 117, 117);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+[data-draggable="target"] {
+    float: left;
+    list-style-type: none;
+    width: 200px;
+    height: 475px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid rgb(17, 38, 230);
+    border-radius: 8px;
+    background: rgb(224, 224, 224);
+    color: rgb(240, 240, 240);
+}
+
+[data-draggable="item"] {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    background: rgb(31, 31, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
